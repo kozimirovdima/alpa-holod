@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" role="img">
+  <title>Холодильный моноблок</title>
+  <defs>
+    <linearGradient id="mb-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f9fcfe"/>
+      <stop offset="1" stop-color="#e4eff7"/>
+    </linearGradient>
+    <linearGradient id="mb-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.6" stop-color="#f0f7fc"/>
+      <stop offset="1" stop-color="#dbe8f2"/>
+    </linearGradient>
+    <pattern id="mb-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#0a141f" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="480" height="360" fill="url(#mb-bg)"/>
+  <rect width="480" height="360" fill="url(#mb-grid)"/>
+  <ellipse cx="240" cy="306" rx="156" ry="16" fill="#0a141f" opacity="0.07"/>
+
+  <!-- крепление -->
+  <path d="M126 86h228" stroke="#94afc3" stroke-width="5" stroke-linecap="round"/>
+  <path d="M148 86v14M332 86v14" stroke="#94afc3" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- корпус -->
+  <rect x="104" y="98" width="272" height="180" rx="12" fill="url(#mb-body)" stroke="#5d7d96" stroke-width="2.5"/>
+
+  <!-- верхняя решётка -->
+  <g stroke="#9db8cb" stroke-width="2" stroke-linecap="round">
+    <path d="M124 116h104M124 126h104M124 136h104"/>
+  </g>
+  <rect x="118" y="106" width="116" height="40" rx="5" fill="none" stroke="#c2d5e2" stroke-width="1.5"/>
+
+  <!-- панель управления -->
+  <rect x="124" y="160" width="98" height="96" rx="8" fill="#f7fbfe" stroke="#a9c1d3" stroke-width="2"/>
+  <rect x="138" y="174" width="70" height="30" rx="4" fill="#0d2637"/>
+  <text x="173" y="195" font-family="Manrope, Segoe UI, sans-serif" font-size="17" font-weight="700" fill="#37c2ef" text-anchor="middle">−18°</text>
+  <circle cx="145" cy="228" r="7" fill="#00a9e0" stroke="#007fae" stroke-width="1.5"/>
+  <circle cx="169" cy="228" r="7" fill="#dbe8f2" stroke="#a9c1d3" stroke-width="1.5"/>
+  <circle cx="193" cy="228" r="7" fill="#dbe8f2" stroke="#a9c1d3" stroke-width="1.5"/>
+  <g stroke="#a9c1d3" stroke-width="2" stroke-linecap="round">
+    <path d="M138 244h70"/>
+  </g>
+
+  <!-- вентилятор -->
+  <g transform="translate(296 196)">
+    <circle r="54" fill="#f2f8fc" stroke="#5d7d96" stroke-width="2.5"/>
+    <circle r="45" fill="none" stroke="#c8dae6" stroke-width="1.5"/>
+    <g fill="#cfe3f0" stroke="#6d8ca3" stroke-width="1.8">
+      <path d="M0 0C16-12 36-4 34 12 33 24 18 30 6 22 0 18-2 8 0 0Z"/>
+      <path d="M0 0C16-12 36-4 34 12 33 24 18 30 6 22 0 18-2 8 0 0Z" transform="rotate(90)"/>
+      <path d="M0 0C16-12 36-4 34 12 33 24 18 30 6 22 0 18-2 8 0 0Z" transform="rotate(180)"/>
+      <path d="M0 0C16-12 36-4 34 12 33 24 18 30 6 22 0 18-2 8 0 0Z" transform="rotate(270)"/>
+    </g>
+    <circle r="11" fill="#00a9e0" stroke="#007fae" stroke-width="2.5"/>
+    <circle r="4" fill="#ffffff"/>
+  </g>
+
+  <!-- поток холодного воздуха -->
+  <g fill="none" stroke="#00a9e0" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="1 0">
+    <path d="M146 292c-6 12-20 16-32 10"/>
+    <path d="M236 296v-14M236 296c-8 8-20 10-30 4"/>
+    <path d="M326 292c6 12 20 16 32 10"/>
+  </g>
+  <g fill="#00a9e0">
+    <path d="M109 297l10-8 1 11z"/>
+    <path d="M201 292l10-6 2 11z"/>
+    <path d="M367 297l-10-8-1 11z"/>
+  </g>
+
+  <!-- размерная линия -->
+  <g stroke="#9db8cb" stroke-width="1.4">
+    <path d="M104 330h272"/>
+    <path d="M104 325v10M376 325v10"/>
+  </g>
+  <text x="240" y="348" font-family="Manrope, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#7e93a6" text-anchor="middle" letter-spacing="1">1 240 мм</text>
+</svg>

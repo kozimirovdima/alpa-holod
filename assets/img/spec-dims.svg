@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" role="img">
+  <title>Габаритный чертёж</title>
+  <defs>
+    <linearGradient id="dm-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f9fcfe"/>
+      <stop offset="1" stop-color="#e4eff7"/>
+    </linearGradient>
+    <pattern id="dm-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20 0H0V20" fill="none" stroke="#0a141f" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="480" height="360" fill="url(#dm-bg)"/>
+  <rect width="480" height="360" fill="url(#dm-grid)"/>
+
+  <!-- корпус: фронт -->
+  <rect x="132" y="104" width="176" height="144" rx="7" fill="#ffffff" stroke="#5d7d96" stroke-width="2.5"/>
+  <g stroke="#c8dae6" stroke-width="1.5">
+    <path d="M132 152h176M132 200h176M220 104v144"/>
+  </g>
+
+  <!-- боковая проекция -->
+  <path d="M308 104l44-22v144l-44 22z" fill="#e2eef7" stroke="#5d7d96" stroke-width="2.2" stroke-linejoin="round"/>
+  <path d="M308 104v144" stroke="#ffffff" stroke-width="1.6"/>
+
+  <!-- вентилятор на фронте -->
+  <g transform="translate(176 176)">
+    <circle r="26" fill="#f2f8fc" stroke="#9db8cb" stroke-width="1.8"/>
+    <g stroke="#b6cddc" stroke-width="1.4">
+      <path d="M0-26v52M-26 0h52M-18-18l36 36M-18 18l36-36"/>
+    </g>
+    <circle r="5" fill="#00a9e0"/>
+  </g>
+
+  <!-- размеры -->
+  <g stroke="#7e93a6" stroke-width="1.4" fill="none">
+    <!-- ширина -->
+    <path d="M132 282h176"/>
+    <path d="M132 276v12M308 276v12"/>
+    <!-- высота -->
+    <path d="M110 104v144"/>
+    <path d="M104 104h12M104 248h12"/>
+    <!-- глубина -->
+    <path d="M352 82l44-22"/>
+    <path d="M348 76l8 12M392 48l8 12"/>
+  </g>
+  <g fill="#7e93a6">
+    <path d="M132 282l9-5v10z"/>
+    <path d="M308 282l-9-5v10z"/>
+  </g>
+
+  <g font-family="Manrope, Segoe UI, sans-serif" fill="#567085" font-weight="700">
+    <text x="220" y="302" font-size="12" text-anchor="middle" letter-spacing="0.6">A — ширина</text>
+    <text x="94" y="180" font-size="12" text-anchor="middle" letter-spacing="0.6" transform="rotate(-90 94 180)">B — высота</text>
+    <text x="392" y="40" font-size="12" text-anchor="middle" letter-spacing="0.6">C — глубина</text>
+  </g>
+
+  <!-- выноска -->
+  <g stroke="#9db8cb" stroke-width="1.2">
+    <path d="M244 176h44" stroke-dasharray="4 4"/>
+  </g>
+  <circle cx="244" cy="176" r="3.2" fill="#00a9e0"/>
+  <text x="296" y="180" font-family="Manrope, Segoe UI, sans-serif" font-size="10.5" font-weight="700" fill="#8ba3b6">панель управления</text>
+
+  <!-- масштаб -->
+  <g font-family="Manrope, Segoe UI, sans-serif" font-size="9.5" font-weight="700" fill="#9db8cb">
+    <text x="40" y="330">Все размеры в миллиметрах. Чертёж схематичный, не для производства.</text>
+  </g>
+</svg>

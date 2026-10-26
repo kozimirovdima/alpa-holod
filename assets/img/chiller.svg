@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" role="img">
+  <title>Чиллер</title>
+  <defs>
+    <linearGradient id="ch-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f9fcfe"/>
+      <stop offset="1" stop-color="#e4eff7"/>
+    </linearGradient>
+    <linearGradient id="ch-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.55" stop-color="#eaf3fa"/>
+      <stop offset="1" stop-color="#d3e4ef"/>
+    </linearGradient>
+    <pattern id="ch-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#0a141f" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="480" height="360" fill="url(#ch-bg)"/>
+  <rect width="480" height="360" fill="url(#ch-grid)"/>
+  <ellipse cx="240" cy="306" rx="158" ry="15" fill="#0a141f" opacity="0.07"/>
+
+  <!-- корпус -->
+  <rect x="96" y="116" width="288" height="156" rx="10" fill="url(#ch-body)" stroke="#5d7d96" stroke-width="2.5"/>
+
+  <!-- жалюзи слева -->
+  <g stroke="#9db8cb" stroke-width="2" stroke-linecap="round">
+    <path d="M112 134h136M112 146h136M112 158h136M112 170h136M112 182h136M112 194h136M112 206h136M112 218h136M112 230h136M112 242h136M112 254h136"/>
+  </g>
+  <rect x="106" y="126" width="148" height="136" rx="5" fill="none" stroke="#c2d5e2" stroke-width="1.4"/>
+
+  <!-- вентиляторы сверху -->
+  <g transform="translate(150 116)">
+    <ellipse cx="0" cy="0" rx="34" ry="11" fill="#eef6fb" stroke="#5d7d96" stroke-width="2.2"/>
+    <path d="M-18 0a18 9 0 0 0 36 0" fill="none" stroke="#9db8cb" stroke-width="1.4"/>
+  </g>
+  <g transform="translate(230 116)">
+    <ellipse cx="0" cy="0" rx="34" ry="11" fill="#eef6fb" stroke="#5d7d96" stroke-width="2.2"/>
+    <path d="M-18 0a18 9 0 0 0 36 0" fill="none" stroke="#9db8cb" stroke-width="1.4"/>
+  </g>
+
+  <!-- панель управления -->
+  <rect x="272" y="134" width="94" height="120" rx="6" fill="#f7fbfe" stroke="#a9c1d3" stroke-width="2"/>
+  <rect x="284" y="146" width="70" height="38" rx="4" fill="#0d2637"/>
+  <text x="319" y="165" font-family="Manrope, Segoe UI, sans-serif" font-size="16" font-weight="800" fill="#37c2ef" text-anchor="middle">+7,0</text>
+  <text x="319" y="177" font-family="Manrope, Segoe UI, sans-serif" font-size="7" font-weight="600" fill="#8ba7ba" text-anchor="middle" letter-spacing="1.5">°C ВОДА</text>
+  <g fill="#cfe0ec" stroke="#a9c1d3" stroke-width="1.2">
+    <rect x="284" y="194" width="20" height="20" rx="3"/>
+    <rect x="309" y="194" width="20" height="20" rx="3"/>
+    <rect x="334" y="194" width="20" height="20" rx="3"/>
+  </g>
+  <circle cx="294" cy="204" r="3" fill="#00a9e0"/>
+  <circle cx="319" cy="204" r="3" fill="#ffffff"/>
+  <circle cx="344" cy="204" r="3" fill="#ffffff"/>
+  <g stroke="#c2d5e2" stroke-width="2" stroke-linecap="round">
+    <path d="M284 228h70M284 238h46"/>
+  </g>
+
+  <!-- патрубки -->
+  <g fill="none" stroke="#5d7d96" stroke-width="9" stroke-linecap="round">
+    <path d="M132 272v26"/>
+    <path d="M348 272v26"/>
+  </g>
+  <g fill="none" stroke="#00a9e0" stroke-width="4" stroke-linecap="round">
+    <path d="M132 272v20"/>
+    <path d="M348 272v20"/>
+  </g>
+  <g fill="#00a9e0">
+    <path d="M126 296h12l-6 9z"/>
+    <path d="M342 288h12l-6 9z" transform="rotate(180 348 292)"/>
+  </g>
+
+  <!-- опоры -->
+  <path d="M112 272v16M368 272v16" stroke="#7d9aae" stroke-width="6" stroke-linecap="round"/>
+
+  <g font-family="Manrope, Segoe UI, sans-serif" font-size="11" font-weight="800" fill="#7e93a6" letter-spacing="1">
+    <text x="106" y="104">ВОЗДУШНЫЙ КОНДЕНСАТОР</text>
+  </g>
+</svg>

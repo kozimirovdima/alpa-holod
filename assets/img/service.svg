@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" role="img">
+  <title>Сервис и техническое обслуживание</title>
+  <defs>
+    <linearGradient id="sv-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f9fcfe"/>
+      <stop offset="1" stop-color="#e4eff7"/>
+    </linearGradient>
+    <linearGradient id="sv-face" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#e7f2f9"/>
+    </linearGradient>
+    <pattern id="sv-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#0a141f" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="480" height="360" fill="url(#sv-bg)"/>
+  <rect width="480" height="360" fill="url(#sv-grid)"/>
+  <ellipse cx="230" cy="308" rx="140" ry="14" fill="#0a141f" opacity="0.07"/>
+
+  <!-- манометр -->
+  <g transform="translate(196 172)">
+    <circle r="86" fill="url(#sv-face)" stroke="#5d7d96" stroke-width="3"/>
+    <circle r="74" fill="none" stroke="#cfe0ec" stroke-width="1.6"/>
+
+    <!-- шкала -->
+    <g stroke="#9db8cb" stroke-width="2" stroke-linecap="round">
+      <path d="M-62 30l8 5M-40 53l5 8M-12 63l2 9M18 63l-2 9M45 53l-5 8M63 33l-8 5"/>
+    </g>
+
+    <!-- дуга рабочих значений -->
+    <path d="M-58 -22a62 62 0 0 1 74-34" fill="none" stroke="#00a9e0" stroke-width="6" stroke-linecap="round"/>
+    <path d="M58 -52a62 62 0 0 1 24 40" fill="none" stroke="#f0a92b" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- стрелка -->
+    <g transform="rotate(28)">
+      <path d="M0 0l-7 10h14z" fill="#0a141f" transform="translate(0 -56) rotate(180)"/>
+      <path d="M0 6V-48" stroke="#0a141f" stroke-width="4" stroke-linecap="round"/>
+    </g>
+    <circle r="9" fill="#0a141f"/>
+    <circle r="3.5" fill="#37c2ef"/>
+
+    <g font-family="Manrope, Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#7e93a6">
+      <text x="0" y="46" text-anchor="middle" letter-spacing="1">R404A</text>
+    </g>
+  </g>
+
+  <!-- гаечный ключ -->
+  <g transform="translate(330 208) rotate(-28)">
+    <path d="M-30 0h96a14 14 0 0 1 0 28h-96z" fill="#cfe1ee" stroke="#5d7d96" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M-30 0a16 16 0 1 0 0 32a16 16 0 1 0 0-32z" fill="#f7fbfe" stroke="#5d7d96" stroke-width="2.5"/>
+    <path d="M-30 8l6 8-6 8" fill="none" stroke="#5d7d96" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M66 0a16 16 0 1 1 0 32a16 16 0 1 1 0-32z" fill="#f7fbfe" stroke="#5d7d96" stroke-width="2.5"/>
+    <path d="M66 8l-6 8 6 8" fill="none" stroke="#5d7d96" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- гаечный ключ 2 -->
+  <g transform="translate(360 104) rotate(48) scale(0.62)">
+    <path d="M-28 0h84a13 13 0 0 1 0 26h-84z" fill="#e9f3f9" stroke="#7d9aae" stroke-width="3"/>
+    <circle cx="-28" cy="13" r="14" fill="#f7fbfe" stroke="#7d9aae" stroke-width="3"/>
+    <circle cx="70" cy="13" r="14" fill="#f7fbfe" stroke="#7d9aae" stroke-width="3"/>
+    <path d="M-28 5l5 8-5 8" fill="none" stroke="#7d9aae" stroke-width="2.6" stroke-linecap="round"/>
+    <path d="M70 5l-5 8 5 8" fill="none" stroke="#7d9aae" stroke-width="2.6" stroke-linecap="round"/>
+  </g>
+
+  <!-- снежинка -->
+  <g transform="translate(120 96)" stroke="#00a9e0" stroke-width="2.6" stroke-linecap="round" opacity="0.85">
+    <path d="M0-16v32M-14-8l28 16M-14 8l28-16"/>
+    <path d="M-5-16l5 5 5-5M-5 16l5-5 5 5M-14-3l6 1 1-6M13 2l-1 5-5 1"/>
+  </g>
+
+  <!-- искры / акцент -->
+  <g stroke="#f0a92b" stroke-width="2.4" stroke-linecap="round" opacity="0.8">
+    <path d="M300 92v10M295 97h10M312 104v6M309 107h6"/>
+  </g>
+</svg>

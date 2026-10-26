@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" role="img">
+  <title>Сборная холодильная камера</title>
+  <defs>
+    <linearGradient id="cm-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f9fcfe"/>
+      <stop offset="1" stop-color="#e4eff7"/>
+    </linearGradient>
+    <linearGradient id="cm-front" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#e2eef7"/>
+    </linearGradient>
+    <linearGradient id="cm-side" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#cfe0ec"/>
+      <stop offset="1" stop-color="#b3cbdd"/>
+    </linearGradient>
+    <pattern id="cm-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#0a141f" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="480" height="360" fill="url(#cm-bg)"/>
+  <rect width="480" height="360" fill="url(#cm-grid)"/>
+  <ellipse cx="240" cy="312" rx="160" ry="15" fill="#0a141f" opacity="0.07"/>
+
+  <!-- боковая панель -->
+  <path d="M360 84l52-22v228l-52 22z" fill="url(#cm-side)" stroke="#5d7d96" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M360 84v228" stroke="#ffffff" stroke-width="2"/>
+
+  <!-- фронт -->
+  <rect x="112" y="84" width="248" height="228" rx="6" fill="url(#cm-front)" stroke="#5d7d96" stroke-width="2.5"/>
+
+  <!-- стыки панелей -->
+  <g stroke="#b6cddc" stroke-width="1.5">
+    <path d="M112 160h248M112 236h248"/>
+    <path d="M236 84v228"/>
+  </g>
+
+  <!-- дверь -->
+  <rect x="132" y="104" width="86" height="196" rx="4" fill="#f7fbfe" stroke="#7d9aae" stroke-width="2.5"/>
+  <rect x="142" y="116" width="66" height="76" rx="3" fill="#dff1fb" stroke="#a9c1d3" stroke-width="1.6"/>
+  <path d="M142 154h66M175 116v76" stroke="#bfd8e9" stroke-width="1.4"/>
+  <!-- ручка -->
+  <rect x="206" y="188" width="8" height="34" rx="4" fill="#5d7d96"/>
+  <path d="M214 188h10" stroke="#5d7d96" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- панель управления -->
+  <rect x="246" y="108" width="82" height="46" rx="5" fill="#0d2637"/>
+  <text x="287" y="130" font-family="Manrope, Segoe UI, sans-serif" font-size="16" font-weight="800" fill="#37c2ef" text-anchor="middle">−20°</text>
+  <text x="287" y="145" font-family="Manrope, Segoe UI, sans-serif" font-size="7.5" font-weight="600" fill="#8ba7ba" text-anchor="middle" letter-spacing="1">КАМЕРА № 2</text>
+
+  <!-- обслуживание -->
+  <g transform="translate(287 194)">
+    <circle r="27" fill="#eef6fb" stroke="#a9c1d3" stroke-width="1.8"/>
+    <g stroke="#00a9e0" stroke-width="3" stroke-linecap="round">
+      <path d="M0-16v32M-14-8l28 16M-14 8l28-16"/>
+      <path d="M-5-16l5 5 5-5M-5 16l5-5 5 5M-14-3l6 1 1-6M13 2l-1 5-5 1"/>
+    </g>
+  </g>
+
+  <!-- петли -->
+  <g fill="#94afc3">
+    <rect x="126" y="124" width="6" height="12" rx="2"/>
+    <rect x="126" y="240" width="6" height="12" rx="2"/>
+  </g>
+
+  <!-- холодный воздух -->
+  <g fill="none" stroke="#00a9e0" stroke-width="2.4" stroke-linecap="round" opacity="0.9">
+    <path d="M92 210c-10 12-10 26 0 38"/>
+    <path d="M74 218c-8 10-8 22 0 32"/>
+  </g>
+  <g fill="#00a9e0">
+    <path d="M92 254l-8-10 11-1z"/>
+    <path d="M74 252l-8-9 11-2z"/>
+  </g>
+
+  <!-- размеры -->
+  <g stroke="#9db8cb" stroke-width="1.4">
+    <path d="M112 330h248"/>
+    <path d="M112 325v10M360 325v10"/>
+    <path d="M412 84v228" stroke-dasharray="4 4"/>
+  </g>
+  <text x="236" y="348" font-family="Manrope, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#7e93a6" text-anchor="middle" letter-spacing="1">2 400 мм</text>
+  <text x="428" y="200" font-family="Manrope, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#7e93a6" text-anchor="middle" letter-spacing="1" transform="rotate(90 428 200)">2 200 мм</text>
+</svg>

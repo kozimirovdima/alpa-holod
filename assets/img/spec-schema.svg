@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360" role="img">
+  <title>Принципиальная схема холодильного контура</title>
+  <defs>
+    <linearGradient id="sc-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f9fcfe"/>
+      <stop offset="1" stop-color="#e4eff7"/>
+    </linearGradient>
+    <pattern id="sc-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20 0H0V20" fill="none" stroke="#0a141f" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+    <marker id="sc-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0l10 5-10 5z" fill="#00a9e0"/>
+    </marker>
+  </defs>
+
+  <rect width="480" height="360" fill="url(#sc-bg)"/>
+  <rect width="480" height="360" fill="url(#sc-grid)"/>
+
+  <!-- зоны -->
+  <rect x="42" y="70" width="190" height="230" rx="10" fill="none" stroke="#b6cddc" stroke-width="1.6" stroke-dasharray="7 6"/>
+  <rect x="252" y="70" width="186" height="230" rx="10" fill="none" stroke="#b6cddc" stroke-width="1.6" stroke-dasharray="7 6"/>
+  <g font-family="Manrope, Segoe UI, sans-serif" font-size="10" font-weight="800" letter-spacing="1.4" fill="#8ba3b6">
+    <text x="56" y="60">МАШИННОЕ ОТДЕЛЕНИЕ</text>
+    <text x="266" y="60">ОХЛАЖДАЕМЫЙ ОБЪЁМ</text>
+  </g>
+
+  <!-- контур -->
+  <g fill="none" stroke="#00a9e0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M158 190V138" marker-end="url(#sc-arrow)"/>
+    <path d="M198 118h84" marker-end="url(#sc-arrow)"/>
+    <path d="M330 138v82" marker-end="url(#sc-arrow)"/>
+    <path d="M290 250H198" marker-end="url(#sc-arrow)"/>
+    <path d="M158 250v-24"/>
+  </g>
+
+  <!-- компрессор -->
+  <g>
+    <circle cx="158" cy="250" r="26" fill="#ffffff" stroke="#5d7d96" stroke-width="2.5"/>
+    <path d="M146 250l8-12 8 12z" fill="#cfe1ee" stroke="#5d7d96" stroke-width="1.4"/>
+    <path d="M150 258h16" stroke="#5d7d96" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="158" cy="250" r="4" fill="#00a9e0"/>
+  </g>
+
+  <!-- конденсатор -->
+  <g>
+    <rect x="128" y="98" width="70" height="40" rx="5" fill="#ffffff" stroke="#5d7d96" stroke-width="2.5"/>
+    <g stroke="#9db8cb" stroke-width="1.6">
+      <path d="M136 108h54M136 118h54M136 128h54"/>
+    </g>
+    <path d="M158 98v-8" stroke="#5d7d96" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- ТРВ -->
+  <g transform="translate(330 118)">
+    <path d="M0-22l22 22-22 22-22-22z" fill="#e3f6fd" stroke="#007fae" stroke-width="2.4" stroke-linejoin="round"/>
+    <path d="M-8 0h16M0-8v16" stroke="#007fae" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- испаритель -->
+  <g>
+    <rect x="298" y="228" width="64" height="44" rx="5" fill="#ffffff" stroke="#5d7d96" stroke-width="2.5"/>
+    <g stroke="#9db8cb" stroke-width="1.6">
+      <path d="M306 238h48M306 248h48M306 258h48"/>
+    </g>
+    <g stroke="#00a9e0" stroke-width="1.8" stroke-linecap="round" opacity="0.8">
+      <path d="M310 262c-6 6-6 12 0 16M340 262c-6 6-6 12 0 16"/>
+    </g>
+  </g>
+
+  <!-- подписи -->
+  <g font-family="Manrope, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#567085">
+    <text x="158" y="296" text-anchor="middle">1. Компрессор</text>
+    <text x="163" y="86" text-anchor="middle">2. Конденсатор</text>
+    <text x="330" y="162" text-anchor="middle">3. ТРВ</text>
+    <text x="330" y="296" text-anchor="middle">4. Испаритель</text>
+  </g>
+
+  <!-- легенда -->
+  <g font-family="Manrope, Segoe UI, sans-serif" font-size="9.5" font-weight="700" fill="#8ba3b6">
+    <text x="42" y="326">нагнетание</text>
+    <text x="196" y="326">жидкость</text>
+    <text x="330" y="108" text-anchor="end">дросселирование</text>
+  </g>
+</svg>
