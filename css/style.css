@@ -530,6 +530,12 @@ b {
   color: #a11f1f;
 }
 
+.form-status--info {
+  background: #eef4fb;
+  color: #1d4e79;
+}
+
+
 .form-status a {
   color: inherit;
   text-decoration: underline;

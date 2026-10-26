@@ -537,3 +537,9 @@ const COMPANY = {
    После первой отправки FormSubmit пришлёт на почту письмо активации — подтвердите его.
    Если сайт переедет на хостинг с PHP, можно вернуть "send.php". */
 const FORM_ENDPOINT = "https://formsubmit.co/ajax/kozimirovdima23@gmail.com";
+
+/* Быстрая альтернатива FormSubmit — Web3Forms (отвечает за 1–2 секунды).
+   Чтобы включить: получите ключ на https://web3forms.com (введите почту —
+   ключ придёт письмом) и укажите его ниже, а в FORM_ENDPOINT поставьте
+   "https://api.web3forms.com/submit". */
+const WEB3FORMS_KEY = "";

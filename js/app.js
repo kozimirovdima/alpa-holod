@@ -192,6 +192,9 @@
         ? FORM_ENDPOINT
         : "send.php";
 
+    var isFormSubmit = endpoint.indexOf("formsubmit.co") !== -1;
+    var isWeb3Forms = endpoint.indexOf("web3forms.com") !== -1;
+
     $$("form[data-form]").forEach(function (form) {
       var status = $(".form-status", form);
       var submit = form.querySelector('[type="submit"]');
@@ -206,6 +209,7 @@
         status.innerHTML = html;
         status.classList.add("is-visible");
         status.classList.toggle("form-status--error", type === "error");
+        status.classList.toggle("form-status--info", type === "info");
         status.setAttribute("tabindex", "-1");
         status.focus({ preventScroll: true });
       };
@@ -233,7 +237,7 @@
         data.append("source", source);
         data.append("ajax", "1");
 
-        if (endpoint.indexOf("formsubmit.co") !== -1) {
+        if (isFormSubmit) {
           data.append("_subject", "Заявка с сайта — " + source);
           data.append("_template", "table");
           data.append("_captcha", "false");
@@ -244,13 +248,36 @@
           }
         }
 
+        if (isWeb3Forms) {
+          if (typeof WEB3FORMS_KEY === "string" && WEB3FORMS_KEY) {
+            data.append("access_key", WEB3FORMS_KEY);
+          }
+          data.append("subject", "Заявка с сайта — " + source);
+          data.append("from_name", "Сайт Альфа-Холод");
+          data.append("botcheck", "");
+        }
+
         var controller =
           "AbortController" in window ? new AbortController() : null;
         var timer = controller
-          ? window.setTimeout(function () {
-              controller.abort();
-            }, 20000)
+          ? window.setTimeout(
+              function () {
+                controller.abort();
+              },
+              isFormSubmit ? 120000 : 25000
+            )
           : null;
+
+        // FormSubmit иногда отвечает около минуты: показываем, что идёт работа.
+        var hint =
+          isFormSubmit && status
+            ? window.setTimeout(function () {
+                showStatus(
+                  "info",
+                  "Отправляем заявку… Иногда это занимает до минуты, не закрывайте страницу."
+                );
+              }, 6000)
+            : null;
 
         fetch(endpoint, {
           method: "POST",
@@ -279,7 +306,12 @@
                 json.success === true ||
                 json.success === "true");
 
-            if (!ok) throw new Error("send_failed");
+            if (!ok) {
+              if (json.message) {
+                console.warn("FormSubmit:", json.message);
+              }
+              throw new Error("send_failed");
+            }
 
             form.reset();
             showStatus("success", successHtml);
@@ -298,22 +330,57 @@
                 ? COMPANY.email
                 : "kozimirovdima23@gmail.com";
 
+            // Письмо-дубль: даже если сервис недоступен, заявку можно отправить.
+            var lines = [];
+            var labels = {
+              name: "Имя",
+              phone: "Телефон",
+              email: "Почта",
+              city: "Город",
+              object: "Тип объекта",
+              volume: "Объём камеры",
+              temp: "Температурный режим",
+              task: "Задача",
+              comment: "Комментарий",
+              product: "Товар",
+              source: "Форма",
+              page: "Страница"
+            };
+
+            data.forEach(function (value, key) {
+              if (typeof value !== "string" || !value) return;
+              if (key.charAt(0) === "_" || key === "ajax") return;
+              if (key === "consent" || key === "consent_required") return;
+              lines.push((labels[key] || key) + ": " + value);
+            });
+
+            var mailto =
+              "mailto:" +
+              email +
+              "?subject=" +
+              encodeURIComponent("Заявка с сайта Альфа-Холод") +
+              "&body=" +
+              encodeURIComponent(
+                lines.length
+                  ? "Заявка с сайта Альфа-Холод\n\n" + lines.join("\n")
+                  : "Заявка с сайта Альфа-Холод"
+              );
+
             showStatus(
               "error",
               "Не удалось отправить заявку. Позвоните <a href=\"" +
                 phoneHref +
                 "\">" +
                 phone +
-                "</a> или напишите на <a href=\"mailto:" +
-                email +
-                "\">" +
-                email +
-                "</a>."
+                "</a> или <a href=\"" +
+                mailto +
+                "\">отправьте её письмом</a> — текст заявки уже подставлен."
             );
           })
           .then(function () {
             sending = false;
             if (timer) window.clearTimeout(timer);
+            if (hint) window.clearTimeout(hint);
             if (submit) {
               submit.disabled = false;
               submit.innerHTML = defaultLabel;
