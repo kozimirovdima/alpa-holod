@@ -223,6 +223,15 @@
         }
 
         if (sending) return;
+
+        // Скрытое поле заполняют только боты: показываем успех и ничего не отправляем.
+        var honey = form.querySelector('[name="_honey"]');
+        if (honey && honey.value.trim()) {
+          form.reset();
+          showStatus("success", successHtml);
+          return;
+        }
+
         sending = true;
 
         if (submit) {
@@ -249,7 +258,11 @@
         }
 
         if (isWeb3Forms) {
-          if (typeof WEB3FORMS_KEY === "string" && WEB3FORMS_KEY) {
+          if (
+            typeof WEB3FORMS_KEY === "string" &&
+            WEB3FORMS_KEY &&
+            !data.has("access_key")
+          ) {
             data.append("access_key", WEB3FORMS_KEY);
           }
           data.append("subject", "Заявка с сайта — " + source);

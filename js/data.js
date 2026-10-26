@@ -533,13 +533,11 @@ const COMPANY = {
 };
 
 /* Куда формы отправляют заявки.
-   GitHub Pages не выполняет PHP, поэтому по умолчанию используется FormSubmit.
-   После первой отправки FormSubmit пришлёт на почту письмо активации — подтвердите его.
+   GitHub Pages не выполняет PHP, поэтому используется Web3Forms — он работает
+   без серверной части и отвечает за 1–2 секунды. Ключ не секретный, его можно
+   держать в коде: он лишь указывает, на какую почту присылать заявки.
    Если сайт переедет на хостинг с PHP, можно вернуть "send.php". */
-const FORM_ENDPOINT = "https://formsubmit.co/ajax/kozimirovdima23@gmail.com";
+const FORM_ENDPOINT = "https://api.web3forms.com/submit";
 
-/* Быстрая альтернатива FormSubmit — Web3Forms (отвечает за 1–2 секунды).
-   Чтобы включить: получите ключ на https://web3forms.com (введите почту —
-   ключ придёт письмом) и укажите его ниже, а в FORM_ENDPOINT поставьте
-   "https://api.web3forms.com/submit". */
-const WEB3FORMS_KEY = "";
+/* Access Key из личного кабинета Web3Forms (получен на почту при регистрации). */
+const WEB3FORMS_KEY = "7e0d1371-6fbc-4c58-b1e2-3075aa5ce5f0";
