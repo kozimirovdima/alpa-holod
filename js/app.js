@@ -277,7 +277,7 @@
               function () {
                 controller.abort();
               },
-              isFormSubmit ? 120000 : 25000
+              isFormSubmit ? 180000 : 25000
             )
           : null;
 
@@ -287,9 +287,9 @@
             ? window.setTimeout(function () {
                 showStatus(
                   "info",
-                  "Отправляем заявку… Иногда это занимает до минуты, не закрывайте страницу."
+                  "Отправляем заявку… Это может занять до двух минут, не закрывайте страницу."
                 );
-              }, 6000)
+              }, 5000)
             : null;
 
         fetch(endpoint, {
